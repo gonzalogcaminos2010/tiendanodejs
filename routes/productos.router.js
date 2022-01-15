@@ -17,12 +17,13 @@ router.get('/',(req,res) =>{
 
 
   }
+
   res.json(productos);
 
 
 });
 
-routerget('/filter',(req,res) =>{
+router.get('/filter',(req,res) =>{
 
   res.send('iohoihoih');
 

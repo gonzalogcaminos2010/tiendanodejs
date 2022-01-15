@@ -1,10 +1,12 @@
-const { app } = require('faker/lib/locales/en');
-const productosRouter = require('./routers/productos.router');
-const usuariosRouter = require('./routers/usuarios.router');
-function routerApi(){
+const productosRouter = require('./productos.router');
+const tiendasRouter = require('./tiendas.router');
+const usuariosRouter = require('./usuarios.router');
+function routerApi(app){
 
-  app.use('/productos',productosRouter);
-  app.use('/usuarios',usuariosRouter);
+  app.use('/productos', productosRouter);
+  app.use('/usuarios', usuariosRouter);
+
+
 
 }
 

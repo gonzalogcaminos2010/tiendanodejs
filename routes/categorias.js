@@ -1,6 +1,8 @@
+const express = require('express');
 const faker = require('faker');
+const router = express.Router();
 
-app.get('/categorias/',(req,res) =>{
+router.get('/categorias/',(req,res) =>{
 
   const { categoryId, id } = req.params;
   res.json({

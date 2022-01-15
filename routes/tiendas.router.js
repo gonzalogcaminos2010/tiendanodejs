@@ -3,7 +3,7 @@ const faker = require('faker');
 const router = express.Router();
 
 
-app.get('/tiendas',(req,res) =>{
+router.get('/tiendas',(req,res) =>{
 
   res.json({
     nombreTienda: 'Tienda 1',
