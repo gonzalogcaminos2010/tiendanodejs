@@ -14,3 +14,4 @@ router.get('/categorias/',(req,res) =>{
 
 
 });
+module.exports = router;

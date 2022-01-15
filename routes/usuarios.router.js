@@ -2,15 +2,25 @@ const express = require('express');
 const faker = require('faker');
 const router = express.Router();
 
+
 router.get('/usuarios',(req,res) =>{
-  const { limit, offset } = req.query;
-  if(limit&&offset){
-    res.json({
-      limit,
-      offset
+  const usuarios = [];
+  const {size} = req.query;
+  const limit = size || 10;
+  for (let index = 0; index < 1000; index++) {
+
+    usuarios.push({
+      nombre: faker.commerce.productName(),
+      precio: parseInt(faker.commerce.price(),10),
+      image:faker.image.imageUrl(),
+
     });
-  } else {
-    res.send('No se encontraron parametros');
+
+
   }
+
+  res.json(usuarios);
+
+
 });
 exports = module.exports = router;
